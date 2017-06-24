@@ -1,12 +1,14 @@
 var React = require('react');
+var Clock = require('Clock');
 
-// Stateless function, this is only used when Components have only the render function
-var Countdown = (props) => {
-  return (
-    <div>
-      <h1 className="text-center page-title">Countdown</h1>
-    </div>
-  )
-};
+var Countdown = React.createClass({
+  render: function(){
+    return (
+      <div>
+        <Clock totalSeconds={129}/>
+      </div>
+    );
+  }
+});
 
 module.exports = Countdown;
